@@ -1,30 +1,18 @@
-﻿Console.WriteLine("Введите число");
-string day = Console.ReadLine()?? "";
+﻿Console.Write("Введи цифру, обозначающую день недели: ");
+string day = Console.ReadLine() ?? "";
+int dayZ = Convert.ToInt32(day);
 
-switch (day) //
+void CheckingTheDayOfTheWeek(int dayZ)
 {
-    case "1":
-        Console.WriteLine("Пн");
-        break;
-    case "2":
-        Console.WriteLine("Вт");
-        break;
-    case "3":
-        Console.WriteLine("Ср");
-        break;
-    case "4":
-        Console.WriteLine("Чт");
-        break;
-    case "5":
-        Console.WriteLine("Пт");
-        break;
-    case "6":
-        Console.WriteLine("Сб");
-        break;
-    case "7":
-        Console.WriteLine("Вс");
-        break;
-    default:
-        Console.WriteLine("Нет такого дня недели");
-        break;
+    if (dayZ == 6 && dayZ == 7)
+    {
+        Console.WriteLine("Это - выходной");
+    }
+    else if (dayZ < 1 && dayZ > 7)
+    {
+        Console.WriteLine("Такого дня недели нет");
+    }
+    else Console.WriteLine("Это - не выходной");
 }
+
+CheckingTheDayOfTheWeek(dayZ);
