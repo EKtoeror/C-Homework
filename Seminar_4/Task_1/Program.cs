@@ -6,9 +6,9 @@ int b = Convert.ToInt32(Console.ReadLine());
 
 b = Math.Abs(b);
 
-int exp=a;
+int result=a;
 for (int i = 1; i < b; i++)
 {
-    exp = a * exp;
+    result = a * result;
 }
-Console.Write(exp);
+Console.Write(result);
