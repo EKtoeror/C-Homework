@@ -26,7 +26,7 @@
     }
     Console.Write("]");
     Console.WriteLine();
-    Console.WriteLine($"{diff}");
+    Console.WriteLine($"Разница между максимальным и минимальным элементов массива{diff}");
 }
 double[] array = new double[4];
 Diff(array);
